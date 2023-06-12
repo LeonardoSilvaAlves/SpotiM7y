@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Player de Música</title>
+  <link rel="stylesheet" type="text/css" href="../static/style.css">
+</head>
+<body>
+  <h1>Player de Música</h1>
+
+  <form action="/search" method="post">
+    <label for="search_query">Pesquisar música por gênero:</label>
+    <input type="text" id="search_query" name="search_query">
+    <button type="submit">Pesquisar</button>
+  </form>
+
+  <!-- Elementos para exibir resultados da pesquisa -->
+  <div id="search-results">
+    <!-- Os resultados da pesquisa serão renderizados aqui -->
+  </div>
+
+  <form action="/create_playlist" method="post">
+    <label for="playlist_name">Nome da playlist:</label>
+    <input type="text" id="playlist_name" name="playlist_name">
+    <button type="submit">Criar playlist</button>
+  </form>
+
+  <form action="/adjust_preferences" method="post">
+    <!-- Elementos para ajustar as preferências de música -->
+    <button type="submit">Ajustar preferências</button>
+  </form>
+
+  <script src="../static/script.js"></script>
+</body>
+</html>

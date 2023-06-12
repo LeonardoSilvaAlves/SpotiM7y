@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resultados da Pesquisa</title>
+  <link rel="stylesheet" type="text/css" href="../static/style.css">
+</head>
+<body>
+  <h1>Resultados da Pesquisa</h1>
+
+  <div id="search-results">
+    {% for track in results['tracks']['items'] %}
+      <div class="track">
+        <img src="{{ track['album']['images'][0]['url'] }}" alt="{{ track['album']['name'] }}">
+        <h2>{{ track['name'] }}</h2>
+        <p>Artista: {{ track['artists'][0]['name'] }}</p>
+        <p>Álbum: {{ track['album']['name'] }}</p>
+        <a href="{{ track['external_urls']['spotify'] }}" target="_blank">Abrir no Spotify</a>
+      </div>
+    {% endfor %}
+  </div>
+</body>
+</html>
